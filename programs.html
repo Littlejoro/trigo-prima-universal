@@ -49,39 +49,9 @@
     </section>
 </main>
 
-    <footer>
-        <div class="container footer-inner">
-            <a href="index.html" class="brand">
-                <span class="brand-mark">T</span>
-                <span>TRIGO<span class="brand-accent">PRIMA</span></span>
-            </a>
-            <p>© 2026 PT. Trigo Prima Universal. Seluruh Hak Cipta Dilindungi.</p>
-            <div class="footer-links">
-                <a href="#">Kebijakan Privasi</a>
-                <a href="#">Syarat & Ketentuan</a>
-            </div>
-        </div>
-    </footer>
+    <div id="site-footer"></div>
 
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('site-header').innerHTML = html;
-
-                const currentPage = 'programs';
-                document.querySelector(`[data-page="${currentPage}"]`)?.classList.add('active');
-
-                const toggle = document.querySelector('.menu-toggle');
-                const links = document.querySelector('.nav-links');
-
-                toggle?.addEventListener('click', () => {
-                    const isOpen = links.classList.toggle('open');
-                    toggle.setAttribute('aria-expanded', isOpen);
-                });
-            })
-            .catch(error => console.error('Header gagal dimuat:', error));
-    </script>
+    <script src="components.js"></script>
     
 </body>
 </html>
